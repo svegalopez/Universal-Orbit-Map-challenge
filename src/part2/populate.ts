@@ -33,12 +33,14 @@ export function populateUniverse(pathToMap: string): node {
 
 function populate(node: node, map: arrangedMap, childKey: string): void {
     const children = map[childKey]
+
+    if (node === null) return
     if (children === undefined) return
 
     for (let c of children) {
-        if (!node![childKey]) node![childKey] = {}
-        node![childKey]![c] = null
-        populate(node![childKey]!, map, c)
+        if (!node[childKey]) node[childKey] = {}
+        node[childKey]![c] = null
+        populate(node[childKey], map, c)
     }
 }
 
@@ -50,7 +52,7 @@ function preProcess(map: string): arrangedMap {
         const relationship = l.split(')');
         const parentNode = relationship[0];
         const childNode = relationship[1];
-        if (arranged[parentNode] === undefined ) arranged[parentNode] = [childNode]
+        if (arranged[parentNode] === undefined) arranged[parentNode] = [childNode]
         else arranged[parentNode].push(childNode)
     })
     return arranged
