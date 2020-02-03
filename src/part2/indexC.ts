@@ -15,18 +15,19 @@ let travelPaths: { [key: string]: any } = {
 }
 
 for (let c of ["YOU", "DST"]) {
-    const n = traverse(d, c, 0, c)
+    traverse(d, c, 0, c)
 }
 
-function traverse(d: any, startingPoint: string, step: number, leaf: string): [number, string] {
+function traverse(d: any, startingPoint: string, step: number, leaf: string): void {
 
     const node = d[startingPoint]
     travelPaths[leaf][node] = step
 
-    if (d[node] === undefined) return [step, node] // When it reaches COM it returns
+    if (d[node] === undefined) return // When it reaches COM it returns
     step++
     return traverse(d, node, step, leaf);
 }
+
 const travelPathYou = Object.keys(travelPaths.YOU).reverse();
 const travelPathDst = Object.keys(travelPaths.DST).reverse();
 
