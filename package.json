@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start:1": "npm run build && node dist/part1/index.js",
-    "start:2b": "npm run build && node dist/part2/indexB.js",
     "start:2": "npm run build && node dist/part2/index.js",
+    "start:2b": "npm run build && node dist/part2/indexB.js",
+    "start:2c": "npm run build && node dist/part2/indexC.js",
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist"
   },
