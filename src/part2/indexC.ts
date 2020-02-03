@@ -14,7 +14,6 @@ let travelPaths: { [key: string]: any } = {
     DST: {}
 }
 
-let result;
 for (let c of ["YOU", "DST"]) {
     const n = traverse(d, c, 0, c)
 }
@@ -33,7 +32,6 @@ const travelPathDst = Object.keys(travelPaths.DST).reverse();
 
 let closestCommonAncestor = '';
 for (let i = 0; i < travelPathYou.length; i++) {
-    //console.log(travelPathYou[i])
     if (travelPathYou[i] !== travelPathDst[i]) {
         closestCommonAncestor = travelPathYou[i-1]
         break
