@@ -38,4 +38,6 @@ for (let i = 0; i < travelPathYou.length; i++) {
     }
 }
 
-console.log(travelPaths.YOU[closestCommonAncestor] + travelPaths.DST[closestCommonAncestor])
+let result = travelPaths.YOU[closestCommonAncestor] + travelPaths.DST[closestCommonAncestor]
+if(closestCommonAncestor=== '') result = 0
+console.log(result)
