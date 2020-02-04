@@ -8,6 +8,7 @@
     "start:2": "npm run build && node dist/part2/index.js",
     "start:2b": "npm run build && node dist/part2/indexB.js",
     "start:2c": "npm run build && node dist/part2/indexC.js",
+    "start:2d": "npm run build && node dist/part2/indexD.js",
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist"
   },
