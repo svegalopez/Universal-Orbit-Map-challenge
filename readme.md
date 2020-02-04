@@ -9,3 +9,5 @@ To run part 2: ```$ npm run start:2```
 To run part 2B: ```$ npm run start:2b```
 <br>
 To run part 2C: ```$ npm run start:2c```
+<br>
+To run part 2D: ```$ npm run start:2d```
